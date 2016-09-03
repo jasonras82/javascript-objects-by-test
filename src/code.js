@@ -94,32 +94,40 @@ function setUserCount(obj){
 
 /* SQUARE BRACKET NOTATION */
 function returnUrlPropertySquare(obj){
-
+  return obj['url'];
 }
 
 function returnSubdomainUserCountSquare(obj){
-
+  return obj.subdomain['userCount'];
 }
 
 function getUserCountSquare(obj){
-
+  return obj['userCount'];
 }
 
 function setUserCountSquare(obj){
-
+  obj['userCount'] = 7;
 }
 
 /* DELETE */
 function deleteSecond(obj){
-
+  delete obj.second;
+  return obj;
 }
 
 /* LOOP */
 function getValuesFromObject(obj){
-
+  var arr = [];
+  for(key in obj) {
+    arr.push(obj[key]);
+  }
+  return arr;
 }
 
 /* FUNCTIONS ARE OBJECTS */
 function invokeAnObject(){
-
+  var arr = [];
+  for(key in obj) {
+    arr.push(myFunc.key);
+  }
 }
